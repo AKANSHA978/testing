@@ -19,8 +19,8 @@ public class AutomationPractice {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//button[normalize-space()='Admin Login']")).click();
-		driver.findElement(By.id("inputEmail")).sendKeys("merchant@gmail.com");
-		driver.findElement(By.id("inputPassword")).sendKeys("merchant@123");
+		driver.findElement(By.id("inputEmail")).sendKeys("merchants@gmail.com");
+		driver.findElement(By.id("inputPassword")).sendKeys("passwordsss@123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//a[@href='/shift-list']")).click();

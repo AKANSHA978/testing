@@ -28,7 +28,7 @@ public class BrokenLinkChecker {
             String url = element.getAttribute("href");
 
             if (url == null || url.isEmpty()) {
-                System.out.println("⚠️ Link URL is either null or empty.");
+                System.out.println("Link URL is either null or empty.");
                 continue;
             }
 
@@ -40,12 +40,12 @@ public class BrokenLinkChecker {
                 int responseCode = connection.getResponseCode();
 
                 if (responseCode >= 400) {
-                    System.out.println("❌ Broken link: " + url + " --> Response Code: " + responseCode);
+                    System.out.println(" Broken link: " + url + " --> Response Code: " + responseCode);
                 } else {
-                    System.out.println("✅ Valid link: " + url + " --> Response Code: " + responseCode);
+                    System.out.println(" Valid link: " + url + " --> Response Code: " + responseCode);
                 }
             } catch (Exception e) {
-                System.out.println("❌ Error in link: " + url + " --> " + e.getMessage());
+                System.out.println(" Error in link: " + url + " --> " + e.getMessage());
             }
         }
 
